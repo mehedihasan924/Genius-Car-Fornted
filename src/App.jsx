@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div data-theme="light" className='max-w-screen-xl mx-auto'>
+    <div  className='max-w-screen-2xl px-24 mx-auto'>
           <RouterProvider router={router} />
    </div>
   )
