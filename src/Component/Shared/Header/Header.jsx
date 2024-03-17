@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import modulName from "../../../assets/logo.svg"
 const Header = () => {
   const menuItems = <>
-      <li className='font-semobold'><Link to="/"> Home</Link></li>
+    <li className='font-semobold'><Link to="/"> Home</Link></li>
+    <li className='font-semobold'><Link to="/login"> Login</Link></li>
   </>
   return (
   <div className="navbar bg-base-100 h-20 mb-12 pt-12 bg-base-100">
