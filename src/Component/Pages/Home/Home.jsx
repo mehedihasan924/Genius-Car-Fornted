@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>,
-      <About></About>,
+        <About></About>,
       <Service></Service>
     </div>
   )
 }
 
-export default Home
+export default Home;
