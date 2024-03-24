@@ -2,14 +2,15 @@ import React from 'react'
 import img from '../../../assets/images/login/login.svg'
 import { Link } from 'react-router-dom'
 const Login = () => {
+  
   const handleLogin = (event) => {
-    event.preventDefault()
+    event.preventDefault();
   }
   return (
-    <div className="hero my-10 py-20 bg-base-200">
+    <div className="hero my-10 py-20 bg-base-200 rounded-xl">
   <div className="hero-content grid md:grid-cols-2 flex-col lg:flex-row gap-10">
     <div className="text-center lg:text-left">
-      <img className='w-3/4' src={img} alt="" />
+      <img className='w-3/4' src={img} alt=""/>
     </div>
         <div className="card shrink-0 w-full max-w-sm  shadow-2xl bg-base-100">
          <h1 className="text-5xl text-center font-bold pt-5">Login </h1>

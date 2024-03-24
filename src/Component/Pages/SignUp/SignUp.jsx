@@ -1,28 +1,25 @@
 import React, { useContext } from 'react'
 import img from '../../../assets/images/login/login.svg';
-import { Link } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
-const SignUp = () => {
 
-  const {createUser}= useContext(AuthContext)
-     const handleSignup = (event) => {
-       event.preventDefault();
-       const form = event.target;
-       const name=form.name.value
-       const email = form.email.value;
-       const password = form.password.value;
-       console.log(name, email, password)
-       
-     createUser(email, password)
-        .then(result =>{
-            const createUser=result.user;
-            console.log(createUser);
-            
-        })
-        .catch(error =>{
-            console.log(error);
-        })
+const SignUp = () => {
+ const {createUser}=useContext(AuthContext)
+  const handleSignup = (event) => {
+    event.preventDefault();
+    const from = event.target;
+    const name = from.name.value;
+    const email = from.email.value;
+    const password = from.password.value;
+    // console.log(name, email, password);  
+    
+    createUser(email, password, name)
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+      })
+    .catch(error=> console.error(error))
   }
   return (
      <div className="hero my-10 py-20 bg-base-200">
