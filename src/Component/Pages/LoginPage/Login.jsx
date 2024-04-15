@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import img from '../../../assets/images/login/login.svg'
 import { Link } from 'react-router-dom'
+import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider'
 const Login = () => {
-  
+   
+  const { signIn } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    signIn(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user)
+      })
+      .then(error => console.log(error));
   }
   return (
     <div className="hero my-10 py-20 bg-base-200 rounded-xl">
